@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- /* 
+    * NAVIGATION BAR 
+    * - Uses semantic <nav> tag
+    * - Contains logo and navigation links
+    * - Mobile menu with hamburger icon
+    */ -->
+    <nav class="navbar">
+        <div class="logo">
+            <span>Portfolio</span>
+        </div>
+        
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        
+        <div class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- /* 
+    * HERO SECTION 
+    * - Introduction with name and title
+    * - Call-to-action button
+    * - Optional background image/color
+    */ -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm <span>Kazeem Tolulope</span></h1>
+            <p>Frontend Web Developer </p>
+            <a href="#projects" class="btn">View my work</a>
+        </div>
+    </section>
+
+    <!-- /* 
+    * ABOUT SECTION 
+    * - Personal bio and image
+    * - Skills with progress bars
+    * - Education/experience timeline
+    */ -->
+   <section id="about" class="about">
+    <h2 class="section-title">About Me</h2>
+
+    <div class="about-container">
+        <!-- Profile image with animated border -->
+        <div class="profile-wrapper">
+            <img src="Images/profile.jpg" alt="Profile Image" class="profile-img">
+        </div>
+
+        <div class="about-content">
+            <h3>Who am I?</h3>
+            <p>
+                A frontend engineer fueled by clean code, animation magic, and interactive design.
+                I specialize in transforming wireframes into pixel-perfect web experiences using HTML, CSS, JavaScript, and React.
+            </p>
+
+            <div class="skills">
+                <h3>My Skills</h3>
+                <div class="skill">
+                    <span>HTML/CSS</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="--progress-width: 90%"></div>
+                    </div>
+
+                </div>
+                <div class="skill">
+                    <span>JavaScript</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="--progress-width: 80%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>React</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="--progress-width: 70%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- /* 
+    * PROJECTS SECTION 
+    * - Grid layout of project cards
+    * - Each card has image, title, description
+    * - Links to live demo and code
+    */ -->
+    <section id="projects" class="projects">
+        <h2 class="section-title">My Projects</h2>
+        
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="https://via.placeholder.com/400x250" alt="Project 1">
+                <div class="project-info">
+                    <h3>E-commerce Website</h3>
+                    <p>A fully responsive online store built with React and Node.js</p>
+                    <div class="project-links">
+                        <a href="#" class="btn-outline">Code</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <img src="https://via.placeholder.com/400x250" alt="Project 2">
+                <div class="project-info">
+                    <h3>Weather App</h3>
+                    <p>Real-time weather application using API integration</p>
+                    <div class="project-links">
+                        <a href="#" class="btn">Live Demo</a>
+                        <a href="#" class="btn-outline">Code</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <img src="https://via.placeholder.com/400x250" alt="Project 3">
+                <div class="project-info">
+                    <h3>Task Manager</h3>
+                    <p>CRUD application for managing daily tasks</p>
+                    <div class="project-links">
+                        <a href="#" class="btn">Live Demo</a>
+                        <a href="#" class="btn-outline">Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- * CONTACT SECTION 
+    * - Contact form with validation
+    * - Social media links
+    * - Location information -->
+    
+    <section id="contact" class="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        
+        <div class="contact-container">
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+            
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:tekmj001@gmail.com">tekmj001@gmail.com</a></p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+2348108826700">+234 810 882 6700</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> Nasarawa, NIGERIA</p>
+                
+                <div class="social-links">
+                    <a target="_blank" href="https://github.com/TeKm100"><i class="fab fa-github"></i></a>
+                    <a target="_blank" href="www.linkedin.com/in/tolulope-kazeem-794a31293"><i class="fab fa-linkedin"></i></a>
+                    <a target="_blank" href="https://x.com/programmer_1001"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- * FOOTER 
+    * - Copyright information
+    * - Back to top button
+    * - Optional sitemap links -->
+    
+    <footer class="footer">
+        <p>&copy; 2025 Kazeem Tolulope .J. All rights reserved.</p>
+        <a href="#home" class="back-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
