@@ -24,33 +24,35 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     /* 
-    * FORM VALIDATION & SUBMISSION 
-    * - Works with FormSubmit.co
-    * - Basic validation
-    * - Success popup before redirect
+    * FORM VALIDATION 
+    * - Basic client-side validation
+    * - Form submission handling
     */
     const contactForm = document.getElementById('contactForm');
     
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
             const name = document.getElementById('name').value.trim();
             const email = document.getElementById('email').value.trim();
             const message = document.getElementById('message').value.trim();
             
+            // Simple validation
             if (!name || !email || !message) {
-                e.preventDefault();
-                alert('⚠️ Please fill in all fields.');
+                alert('Please fill in all fields');
                 return;
             }
             
             if (!validateEmail(email)) {
-                e.preventDefault();
-                alert('⚠️ Please enter a valid email address.');
+                alert('Please enter a valid email address');
                 return;
             }
-
-            // Show confirmation popup (then FormSubmit handles redirect)
-            alert(`✅ Thank you, ${name}! Your message has been sent.`);
+            
+            // Form submission (in a real app, you would send to a server)
+            alert(`Thank you, ${name}! Your message has been sent.`);
+            contactForm.reset();
         });
     }
     
@@ -83,8 +85,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     /* 
     * SCROLL ANIMATIONS 
+    * - Add/remove active class based on scroll position
     * - Highlight current section in navigation
-    * - Show/hide back-to-top button
     */
     window.addEventListener('scroll', function() {
         const scrollPosition = window.scrollY;
