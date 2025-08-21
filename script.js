@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
     /* 
     * SMOOTH SCROLLING 
     * - For navigation links
-    * - Back to top button
+    * - Back to top button 
     */
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
