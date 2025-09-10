@@ -63,8 +63,7 @@
         <div class="about-content">
             <h3>Who am I?</h3>
             <p>
-                A frontend engineer fueled by clean code, animation magic, and interactive design.
-                I specialize in transforming wireframes into pixel-perfect web experiences using HTML, CSS, JavaScript, and React.
+                A frontend engineer fueled by clean code, animation magic, and interactive design. I specialize in transforming wireframes into pixel-perfect web experiences using HTML, CSS, JavaScript, and React — while leveraging AI-assisted web development to build smarter, faster, and more efficient solutions.
             </p>
 
             <div class="skills">
@@ -72,20 +71,26 @@
                 <div class="skill">
                     <span>HTML/CSS</span>
                     <div class="progress-bar">
-                        <div class="progress" style="--progress-width: 90%"></div>
+                        <div class="progress" style="--progress-width: 80%"></div>
                     </div>
 
                 </div>
                 <div class="skill">
                     <span>JavaScript</span>
                     <div class="progress-bar">
-                        <div class="progress" style="--progress-width: 80%"></div>
+                        <div class="progress" style="--progress-width: 65%"></div>
                     </div>
                 </div>
                 <div class="skill">
                     <span>React</span>
                     <div class="progress-bar">
-                        <div class="progress" style="--progress-width: 70%"></div>
+                        <div class="progress" style="--progress-width: 55%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>AI & Tools</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="--progress-width: 75%"></div>
                     </div>
                 </div>
             </div>
@@ -104,36 +109,37 @@
         
         <div class="projects-grid">
             <div class="project-card">
-                <img src="https://via.placeholder.com/400x250" alt="Project 1">
+                <img src="Images/movie.png" alt="Project 1">
                 <div class="project-info">
-                    <h3>E-commerce Website</h3>
-                    <p>A fully responsive online store built with React and Node.js</p>
+                    <h3>Movie Website</h3>
+                    <p>A fully responsive online movie website built with React using TMDB API</p>
                     <div class="project-links">
-                        <a href="#" class="btn-outline">Code</a>
+                        <a href="https://movieminiac.netlify.app/" class="btn">Live Demo</a>
+                        <a href="https://github.com/TeKm100/day3-project.git" class="btn-outline">Code</a>
                     </div>
                 </div>
             </div>
             
             <div class="project-card">
-                <img src="https://via.placeholder.com/400x250" alt="Project 2">
+                <img src="Images/todo.png" alt="Project 2">
                 <div class="project-info">
-                    <h3>Weather App</h3>
-                    <p>Real-time weather application using API integration</p>
+                    <h3>Todo App</h3>
+                    <p>Real-time todo application using API integration</p>
                     <div class="project-links">
-                        <a href="#" class="btn">Live Demo</a>
-                        <a href="#" class="btn-outline">Code</a>
+                        <a href="https://projtolu.netlify.app/" class="btn">Live Demo</a>
+                        <a href="https://github.com/TeKm100/30Days-project2.git" class="btn-outline">Code</a>
                     </div>
                 </div>
             </div>
             
             <div class="project-card">
-                <img src="https://via.placeholder.com/400x250" alt="Project 3">
+                <img src="Images/blogAi.png" alt="Project 3">
                 <div class="project-info">
-                    <h3>Task Manager</h3>
-                    <p>CRUD application for managing daily tasks</p>
+                    <h3>AI Blog Generator</h3>
+                    <p>AI-powered blog post generator using natural language processing</p>
                     <div class="project-links">
-                        <a href="#" class="btn">Live Demo</a>
-                        <a href="#" class="btn-outline">Code</a>
+                        <a href="https://tekmbloggenie.netlify.app/" class="btn">Live Demo</a>
+                        <a href="https://github.com/TeKm100/TekmBlogGennie.git" class="btn-outline">Code</a>
                     </div>
                 </div>
             </div>
@@ -144,6 +150,7 @@
                        <h3>AI Landing Page</h3>
                        <p>AI Landing Page with HTML, CSS & JavaScript | Modern UI, Animations & Parallax Effects!</p>
                        <div class="project-links">
+                           <a href="https://candid-phoenix-64900b.netlify.app/" class="btn">Live Demo</a>
                            <a target="_blank" href="https://github.com/TeKm100/Ai-Landing-Page.git" class="btn-outline">Github Code</a>
                        </div>
                    </div>
@@ -162,15 +169,15 @@
         <h2 class="section-title">Get In Touch</h2>
         
         <div class="contact-container">
-            <form class="contact-form" id="contactForm">
+            <form id="contactForm" class="contact-form">
                 <div class="form-group">
-                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="text" id="name" name="user_name" placeholder="Your Name" required>
                 </div>
                 <div class="form-group">
-                    <input type="email" id="email" placeholder="Your Email" required>
+                    <input type="email" id="email" name="user_email" placeholder="Your Email" required>
                 </div>
                 <div class="form-group">
-                    <textarea id="message" placeholder="Your Message" required></textarea>
+                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
                 </div>
                 <button type="submit" class="btn">Send Message</button>
             </form>
@@ -203,6 +210,14 @@
         </a>
     </footer>
 
-    <script src="script.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("gHU2YZ0LO9hwAk8J6"); // ✅ Your public key
+  })();
+</script>
+<script src="script.js"></script>
+
+
 </body>
 </html>

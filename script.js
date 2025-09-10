@@ -22,44 +22,26 @@ document.addEventListener('DOMContentLoaded', function() {
             hamburger.querySelector('i').classList.add('fa-bars');
         });
     });
-    
+
     /* 
-    * FORM VALIDATION 
-    * - Basic client-side validation
-    * - Form submission handling
+    * EMAILJS FORM HANDLER 
+    * - Sends form data via EmailJS
     */
     const contactForm = document.getElementById('contactForm');
-    
+
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('name').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const message = document.getElementById('message').value.trim();
-            
-            // Simple validation
-            if (!name || !email || !message) {
-                alert('Please fill in all fields');
-                return;
-            }
-            
-            if (!validateEmail(email)) {
-                alert('Please enter a valid email address');
-                return;
-            }
-            
-            // Form submission (in a real app, you would send to a server)
-            alert(`Thank you, ${name}! Your message has been sent.`);
-            contactForm.reset();
+
+            emailjs.sendForm("service_lmn89ol", "template_basgjrc", this)
+                .then(() => {
+                    alert("✅ Message sent successfully!");
+                    contactForm.reset();
+                }, (error) => {
+                    alert("❌ Failed to send message. Please try again.");
+                    console.error(error);
+                });
         });
-    }
-    
-    // Email validation helper function
-    function validateEmail(email) {
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return re.test(email);
     }
     
     /* 
